@@ -1,0 +1,16 @@
+代理生成脚本
+----------
+
+## PAC
+自动下载 apnic 的地址列表，白名单方式处理 CN IP 地址，加快访问速度。
+
+支持名单列表，强制指定某些域名从代理访问，方式因为 DNS 污染导致无法访问。
+
+添加被 GFW 的域名，生成 gfw.list 文件:
+    $ ./gfw-make.sh BLOCKED-DOMAIN
+
+创建 auto.pac，如果存在 gfw.list 将创建额外规则:
+    $ python make.py
+
+## ppp router
+...
